@@ -1,0 +1,20 @@
+{
+    "name": "qbcore",
+    "displayName": "QBCore",
+    "description": "A QBCore snippet extension to make you live easier",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.96.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "lua",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+    }
+}

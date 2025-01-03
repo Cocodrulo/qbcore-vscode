@@ -1,0 +1,54 @@
+{
+    "QBCore exports": {
+        "prefix": "qbe",
+        "body": ["QBCore = exports['qb-core']:GetCoreObject()"],
+        "description": "Retrieves the QBCore framework object"
+    },
+    "Player": {
+        "prefix": "player",
+        "body": ["local Player = QBCore.Functions.GetPlayer(source)"],
+        "description": "Gets the Player object from source"
+    },
+    "Create Callback": {
+        "prefix": "createcallback",
+        "body": [
+            "QBCore.Functions.CreateCallback('${1:callbackname}', function(source, cb, ${2:args})",
+            "    cb()",
+            "end)"
+        ],
+        "description": "Registers a server callback"
+    },
+    "Trigger Callback": {
+        "prefix": "triggercallback",
+        "body": [
+            "QBCore.Functions.TriggerCallback('${1:callbackname}', function(result)",
+            "    ",
+            "end, ${2:args})"
+        ],
+        "description": "Triggers a server callback that have been already registered"
+    },
+    "Command": {
+        "prefix": "command",
+        "body": [
+            "QBCore.Commands.Add('${1:command name}', '${2:command help text}', {${3}}, ${4|true,false|}, function(source, args, rawcmd)",
+            "    ",
+            "end, ${5:false})"
+        ],
+        "description": "Register a new Command"
+    },
+    "Progressbar": {
+        "prefix": "progress",
+        "body": [
+            "QBCore.Functions.Progressbar('${1:unique id}', '${2:What the player sees}', ${3:1500}, ${4|true,false|}, ${5|true,false|}, ",
+            "    {$6}, {$7}, {$8}, {$9}, ",
+            "    function()",
+            "        -- This code runs if the progress bar completes successfully",
+            "        ",
+            "    end, function()",
+            "        -- This code runs if the progress bar gets cancelled",
+            "        ",
+            "end)"
+        ],
+        "description": "Creates a progressbar"
+    }
+}
